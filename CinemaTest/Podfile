@@ -7,5 +7,6 @@ target 'CinemaTest' do
 
   # Pods for CinemaTest
 pod 'Alamofire', '~> 5.2'
+pod 'SDWebImage/WebP'
 
 end

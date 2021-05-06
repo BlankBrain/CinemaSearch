@@ -19,7 +19,7 @@ struct Movie :Decodable  {
         results:  [Result] = [],
         totalPages: Int?,
         totalResults: Int?
-    
+        
     ){
         self.page = page ?? 1
         self.results = results
@@ -74,7 +74,7 @@ struct Result :Decodable{
         self.video = video ?? false
         self.voteAverage = voteAverage
         self.voteCount = voteCount
-
+        
     }
 }
 
@@ -82,16 +82,16 @@ enum OriginalLanguage: Decodable  {
     case en(String)
 }
 extension OriginalLanguage {
-
+    
     private enum CodingKeys: String, CodingKey {
-       
+        
         case en
     }
-
+    
     enum OriginalLanguageCodingError: Error {
         case decoding(String)
     }
-
+    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         if let value = try? values.decode(String.self, forKey: .en) {
@@ -101,15 +101,15 @@ extension OriginalLanguage {
         
         throw OriginalLanguageCodingError.decoding("error, dumping values ! \(dump(values))")
     }
-
+    
 } 
 struct genreIDS :Decodable {
     
-        let genreID: Int?
+    let genreID: Int?
     init(
         genreID: Int?){
         self.genreID = genreID
-
+        
     }
 }
 
