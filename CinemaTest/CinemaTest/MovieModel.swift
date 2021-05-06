@@ -34,7 +34,7 @@ struct Result :Decodable{
     let backdropPath: String?
     let genreIDS: [genreIDS]
     let id: Int
-    let originalLanguage: OriginalLanguage
+    let originalLanguage: OriginalLanguage?
     let originalTitle : String?
     let overview: String?
     let popularity: Double?
@@ -50,7 +50,7 @@ struct Result :Decodable{
         backdropPath: String?,
         genreIDS:  [genreIDS] = [],
         id: Int?,
-        originalLanguage: OriginalLanguage,
+        originalLanguage: OriginalLanguage?,
         originalTitle: String?,
         overview: String?,
         popularity: Double?,
@@ -78,9 +78,31 @@ struct Result :Decodable{
     }
 }
 
-enum OriginalLanguage: String, Decodable  {
-    case en, other
+enum OriginalLanguage: Decodable  {
+    case en(String)
 }
+extension OriginalLanguage {
+
+    private enum CodingKeys: String, CodingKey {
+       
+        case en
+    }
+
+    enum OriginalLanguageCodingError: Error {
+        case decoding(String)
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        if let value = try? values.decode(String.self, forKey: .en) {
+            self = .en(value)
+            return
+        }
+        
+        throw OriginalLanguageCodingError.decoding("error, dumping values ! \(dump(values))")
+    }
+
+} 
 struct genreIDS :Decodable {
     
         let genreID: Int?

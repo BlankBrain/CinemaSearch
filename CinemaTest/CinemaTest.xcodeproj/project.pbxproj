@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		BA65622E26443EFF0022D6FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA65622D26443EFF0022D6FB /* Assets.xcassets */; };
 		BA65623126443EFF0022D6FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA65622F26443EFF0022D6FB /* LaunchScreen.storyboard */; };
 		BA65623B264444CB0022D6FB /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA65623A264444CB0022D6FB /* MovieModel.swift */; };
+		BA6562412644611C0022D6FB /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6562402644611C0022D6FB /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BA65623026443EFF0022D6FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA65623226443EFF0022D6FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA65623A264444CB0022D6FB /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		BA6562402644611C0022D6FB /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +52,6 @@
 				8CCC7DB71B7F51F084F4A59A /* Pods-CinemaTest.debug.xcconfig */,
 				B57A5B64205317AFF05C9C3D /* Pods-CinemaTest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -78,6 +79,7 @@
 				BA65622426443EFD0022D6FB /* AppDelegate.swift */,
 				BA65622626443EFD0022D6FB /* SceneDelegate.swift */,
 				BA65622826443EFD0022D6FB /* MovieListVC.swift */,
+				BA6562402644611C0022D6FB /* TableViewCell.swift */,
 				BA65622A26443EFD0022D6FB /* Main.storyboard */,
 				BA65622D26443EFF0022D6FB /* Assets.xcassets */,
 				BA65622F26443EFF0022D6FB /* LaunchScreen.storyboard */,
@@ -209,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA6562412644611C0022D6FB /* TableViewCell.swift in Sources */,
 				BA65623B264444CB0022D6FB /* MovieModel.swift in Sources */,
 				BA65622926443EFD0022D6FB /* MovieListVC.swift in Sources */,
 				BA65622526443EFD0022D6FB /* AppDelegate.swift in Sources */,
