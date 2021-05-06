@@ -9,8 +9,8 @@ import UIKit
 import Alamofire
 
 class MovielistVC: UIViewController, UITableViewDelegate , UITableViewDataSource {
-    
-    
+    @IBOutlet weak var searchField: UITextField!
+        
     @IBOutlet weak var tableView: UITableView!
     let cellIdentifiar : String = "cell"
     let decoder = JSONDecoder()
@@ -23,8 +23,17 @@ class MovielistVC: UIViewController, UITableViewDelegate , UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+    }
+    
+    @IBAction func SearchButtonclicked(_ sender: Any) {
+        let searchText = self.searchField.text ?? ""
+        Titles.removeAll()
+        OverView.removeAll()
+        imageUrl.removeAll()
+        
         // alamofire request
-        let Url = "https://api.themoviedb.org/3/search/movie?api_key=38e61227f85671163c275f9bd95a8803&query=marvel"
+        let Url = (("https://api.themoviedb.org/3/search/movie?api_key=38e61227f85671163c275f9bd95a8803&query=") + (searchText) )
         AF.request(Url).responseJSON{ response in
             
             //MARK: There is a error in my model so i could not use decoder. i'm confident that it's a minor error and given enough time i can solve it on my own. please see the MovieModel file for details
@@ -51,16 +60,17 @@ class MovielistVC: UIViewController, UITableViewDelegate , UITableViewDataSource
                         self.OverView.append(item["overview"] as! String )
                         self.imageUrl.append(item["poster_path"] as? String  ?? "")
                         // print(item["poster_path"] ?? "")
-                        self.tableView.reloadData()
                         
                     }
                     
                 }
             }
+            self.tableView.reloadData()
+
         }
-        
-        
     }
+    
+    
     
     
     
