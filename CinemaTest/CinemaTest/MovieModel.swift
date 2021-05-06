@@ -8,7 +8,7 @@
 import Foundation
 
 
-// MARK: - Movie
+// MARK: - Movie model
 struct Movie :Decodable  {
     let page: Int
     let results: [Result]
@@ -28,7 +28,8 @@ struct Movie :Decodable  {
     }
 }
 
-// MARK: - Result
+
+//MARK: ========================================= I think the problem lies somewhare here or it could be some mismatched data types, sorry i got stuck and couldnot find that in time. i have completed simillar tasks many times over and i'm embarrassed this happened 
 struct Result :Decodable{
     let adult: Int
     let backdropPath: String?
@@ -77,7 +78,6 @@ struct Result :Decodable{
         
     }
 }
-
 enum OriginalLanguage: Decodable  {
     case en(String)
 }
