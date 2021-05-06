@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FFE816F58EFCAA27B23D272 /* Pods_CinemaTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC012944C157EDC018EB00D /* Pods_CinemaTest.framework */; };
 		BA65622526443EFD0022D6FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA65622426443EFD0022D6FB /* AppDelegate.swift */; };
 		BA65622726443EFD0022D6FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA65622626443EFD0022D6FB /* SceneDelegate.swift */; };
 		BA65622926443EFD0022D6FB /* MovieListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA65622826443EFD0022D6FB /* MovieListVC.swift */; };
 		BA65622C26443EFD0022D6FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA65622A26443EFD0022D6FB /* Main.storyboard */; };
 		BA65622E26443EFF0022D6FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA65622D26443EFF0022D6FB /* Assets.xcassets */; };
 		BA65623126443EFF0022D6FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA65622F26443EFF0022D6FB /* LaunchScreen.storyboard */; };
+		BA65623B264444CB0022D6FB /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA65623A264444CB0022D6FB /* MovieModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6AC012944C157EDC018EB00D /* Pods_CinemaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CinemaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CCC7DB71B7F51F084F4A59A /* Pods-CinemaTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CinemaTest.debug.xcconfig"; path = "Target Support Files/Pods-CinemaTest/Pods-CinemaTest.debug.xcconfig"; sourceTree = "<group>"; };
+		B57A5B64205317AFF05C9C3D /* Pods-CinemaTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CinemaTest.release.xcconfig"; path = "Target Support Files/Pods-CinemaTest/Pods-CinemaTest.release.xcconfig"; sourceTree = "<group>"; };
 		BA65622126443EFD0022D6FB /* CinemaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CinemaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA65622426443EFD0022D6FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA65622626443EFD0022D6FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		BA65622D26443EFF0022D6FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA65623026443EFF0022D6FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA65623226443EFF0022D6FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA65623A264444CB0022D6FB /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FFE816F58EFCAA27B23D272 /* Pods_CinemaTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CD634282E8A337048FCC4B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8CCC7DB71B7F51F084F4A59A /* Pods-CinemaTest.debug.xcconfig */,
+				B57A5B64205317AFF05C9C3D /* Pods-CinemaTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BA65621826443EFD0022D6FB = {
 			isa = PBXGroup;
 			children = (
 				BA65622326443EFD0022D6FB /* CinemaTest */,
 				BA65622226443EFD0022D6FB /* Products */,
+				0CD634282E8A337048FCC4B8 /* Pods */,
+				BB122053588518F15A5BA8F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,9 +81,18 @@
 				BA65622A26443EFD0022D6FB /* Main.storyboard */,
 				BA65622D26443EFF0022D6FB /* Assets.xcassets */,
 				BA65622F26443EFF0022D6FB /* LaunchScreen.storyboard */,
+				BA65623A264444CB0022D6FB /* MovieModel.swift */,
 				BA65623226443EFF0022D6FB /* Info.plist */,
 			);
 			path = CinemaTest;
+			sourceTree = "<group>";
+		};
+		BB122053588518F15A5BA8F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AC012944C157EDC018EB00D /* Pods_CinemaTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA65623526443EFF0022D6FB /* Build configuration list for PBXNativeTarget "CinemaTest" */;
 			buildPhases = (
+				6E35A4351181C84CDE31C0BF /* [CP] Check Pods Manifest.lock */,
 				BA65621D26443EFD0022D6FB /* Sources */,
 				BA65621E26443EFD0022D6FB /* Frameworks */,
 				BA65621F26443EFD0022D6FB /* Resources */,
+				041AAA570202060386098A2C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,11 +162,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		041AAA570202060386098A2C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CinemaTest/Pods-CinemaTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CinemaTest/Pods-CinemaTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CinemaTest/Pods-CinemaTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E35A4351181C84CDE31C0BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CinemaTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BA65621D26443EFD0022D6FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA65623B264444CB0022D6FB /* MovieModel.swift in Sources */,
 				BA65622926443EFD0022D6FB /* MovieListVC.swift in Sources */,
 				BA65622526443EFD0022D6FB /* AppDelegate.swift in Sources */,
 				BA65622726443EFD0022D6FB /* SceneDelegate.swift in Sources */,
@@ -283,6 +356,7 @@
 		};
 		BA65623626443EFF0022D6FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CCC7DB71B7F51F084F4A59A /* Pods-CinemaTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +376,7 @@
 		};
 		BA65623726443EFF0022D6FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B57A5B64205317AFF05C9C3D /* Pods-CinemaTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

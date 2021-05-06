@@ -12,6 +12,7 @@ class MovielistVC: UIViewController, UITableViewDelegate , UITableViewDataSource
 
     @IBOutlet weak var tableView: UITableView!
     let cellIdentifiar : String = "cell"
+    var movies = [Movie]()
     
     
     override func viewDidLoad() {
